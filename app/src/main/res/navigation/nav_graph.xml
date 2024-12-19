@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment
+        android:id="@+id/fr1"
+        android:name="com.example.kotlin_pr2.Fragment1"
+        android:label="Fragment 1">
+        <action
+            android:id="@+id/button_navigate_2"
+            app:destination="@+id/fr2"/>
+        </fragment>
+
+    <fragment
+        android:id="@+id/fr2"
+        android:name="com.example.kotlin_pr2.Fragment2"
+        android:label="Fragment 2">
+        <action
+            android:id="@+id/button_navigate_3"
+            app:destination="@+id/fr3"/>
+        <action
+            android:id="@+id/button_back"
+            app:destination="@+id/fr1"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fr3"
+        android:name="com.example.kotlin_pr2.Fragment3"
+        android:label="Fragment 3">
+        <action
+            android:id="@+id/button_back"
+            app:destination="@+id/fr2"/>
+    </fragment>
+</navigation>
